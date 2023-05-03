@@ -37,7 +37,7 @@ render_emoji = true
 smart_punctuation = true
 
 [extra]
-homepage_title = "hello, i'm nikhil."
+homepage_title = "hello, i'm nikhil"
 homepage_subtitle = "software engineer. writer. dilettante."
 homepage_img_url = "/images/profile-2.jpg"
 
