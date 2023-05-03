@@ -8,6 +8,14 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3.0.0
+      - name: checkout submodule
+        run: cd themes/boring/ | git submodule update --init | cd ../..
+      - name: use node.js for css build
+        uses: actions/setup-node@v3
+      - name: install dependencies for css build
+        run: yarn install
+      - name: build css
+        run: yarn build
       - name: build_and_deploy
         uses: shalzz/zola-deploy-action@v0.17.2
         env:
