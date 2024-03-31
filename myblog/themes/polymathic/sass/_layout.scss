@@ -1,0 +1,62 @@
+.poly-header {
+  @extend .container;
+  overflow-y: visible !important;
+
+  &.is-fluid {
+    @include until($desktop) {
+      padding-left: $gap/2;
+      padding-right: $gap/2;
+    }
+  }
+
+  .poly-navigation-container {
+    @extend .navbar-menu;
+    
+
+    .poly-nav {
+      @extend .navbar-start;
+      .poly-nav-section.poly-is-one {
+        display: contents;
+        a {
+          @extend .navbar-item;
+        }
+      }
+      > .poly-nav-section:not(.poly-is-one) {
+        @extend .navbar-item, .has-dropdown, .is-hoverable;
+        > .poly-section-link {
+          @extend .navbar-link;
+        }
+        .poly-navbar-dropdown {
+          @extend .navbar-dropdown;
+          a {
+            @extend .navbar-item;
+          }
+        }
+      }
+    }
+  }
+}
+
+.poly-layout-main {
+  display: contents;
+  &.is-fluid {
+    .poly-page-content {
+      @extend .container, .is-fluid;
+    }
+  }
+  &.is-fullhd {
+    .poly-page-content {
+      @extend .container, .is-fullhd;
+    }
+  }
+  .poly-result-content {
+    @extend .container, .mx-6;
+  }
+}
+
+.poly-breadcrumbs-header {
+  @extend .container;
+  @include from($tablet) {
+    position: absolute;
+  }
+}

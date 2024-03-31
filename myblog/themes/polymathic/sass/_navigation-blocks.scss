@@ -1,0 +1,128 @@
+@use "sass:map";
+
+.poly-navigation-blocks {
+  @extend .container, .is-fluid, .px-0;
+  background: $poly-navigation-blocks-background;
+  > section {
+    display: contents;
+    .poly-nav {
+      display: grid;
+      grid-auto-flow: dense;
+      @include until($tablet) {
+        grid-template-columns: repeat(map.get($poly-navigation-blocks-grid, 'mobile'), 1fr);
+      }
+      @include from($tablet) {
+        grid-template-columns: repeat(map.get($poly-navigation-blocks-grid, 'tablet'), 1fr);
+      }
+      @include from($desktop) {
+        grid-template-columns: repeat(map.get($poly-navigation-blocks-grid, 'desktop'), 1fr);
+      }
+      @include from($widescreen) {
+        grid-template-columns: repeat(map.get($poly-navigation-blocks-grid, 'widescreen'), 1fr);
+      }
+      @include from($fullhd) {
+        grid-template-columns: repeat(map.get($poly-navigation-blocks-grid, 'fullhd'), 1fr);
+      }
+
+      .poly-nav-section:not(.poly-is-one) {
+        display: grid;
+        justify-items: stretch;
+        
+        
+        grid-template-columns: 1fr 1fr;
+        @include until($tablet) {
+          grid-template-columns: subgrid;
+        }
+        @include until($desktop) {
+          grid-row: span calc(var(--poly-rows) * 2);
+        }
+
+        grid-template-rows: subgrid;
+        grid-column: span 2;
+
+        @include from($desktop) {
+          grid-template-columns: repeat(4, 1fr);
+          grid-row: span var(--poly-rows);
+          .poly-tile:first-child {
+            grid-row: span calc(var(--poly-rows) / 2 + 1);
+          }
+        }
+
+        .poly-tile:first-child {
+          grid-column: span 2;
+        }
+
+        .poly-tile:not(:first-child) {
+          .poly-hero-card .poly-content {
+            padding: $poly-grid-pop;
+          }
+        }
+      }
+
+      .poly-is-one {
+        display: contents;
+        @include until($tablet) {
+          a {
+            grid-column: span 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.poly-pair-nav {
+  @extend .columns, .is-mobile, .is-align-items-center;
+  .poly-link, .nav-title {
+    @extend .column, .is-one-third, .is-block;
+  }
+  .nav-title{
+    @extend .has-text-centered, .is-size-7;
+    &:first-child {
+      @extend .is-offset-one-third;
+    }
+  }
+  .nav-prev {
+    &::before {
+      @include arrow($link-dark);
+      transform: rotate(45deg);
+      display: inline-block;
+      position: relative;
+      top: unset;
+      margin-right: .25rem;
+    }
+  }
+  .nav-next {
+    @extend .has-text-right;
+    &::after {
+      @include arrow($link-dark);
+      transform: rotate(-135deg);
+      display: inline-block;
+      position: relative;
+      top: unset;
+      margin-left: .25rem;
+    }
+  }
+}
+
+.poly-toc {
+  @extend .is-flex, .is-flex-direction-column, .is-flex-grow-1, .is-flex-shrink-0;
+  .poly-toc {
+    @extend .pl-1, .is-flex-grow-0;
+  }
+  .poly-link{
+    $headers: (1: $black, 2: $grey-darker, 3: $grey-dark, 4: $grey, 5: $grey-light, 6: $grey-lighter);
+    @each $i, $color in $headers {
+      &.poly-lvl-#{$i} {
+        color: $color;
+        @if $i > 4 {
+          @extend .has-text-weight-semibold;
+        }
+      }
+    }
+  }
+}
+
+.poly-breadcrumbs {
+  @extend .breadcrumb, .is-right, .is-small;
+}

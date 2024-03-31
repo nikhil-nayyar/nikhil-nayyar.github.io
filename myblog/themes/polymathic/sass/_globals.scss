@@ -1,0 +1,49 @@
+
+hr {
+  background-color: transparent;
+  border-bottom: 0.5px solid $grey-light;
+}
+
+.is-container.is-fullhd {
+  @include until($fullhd) {
+    margin-left: $gap;
+    margin-right: $gap;
+  }
+  @include until($tablet) {
+    margin-left: $gap / 3;
+    margin-right: $gap / 3;
+  }
+}
+
+.control > .select {
+  &, > select {
+    width: 100%;
+  }
+}
+
+.field:not(.is-horizontal) .field-label .label {
+  text-align: left;
+}
+
+.poly-load-style {
+  visibility: visible !important;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.poly-portrait {
+  img {
+    max-height: 90vh;
+    width: auto !important;
+    margin: 0 auto;
+  }
+}
+
+.is-hidden {
+  img {
+    display: none;
+  }
+}

@@ -1,0 +1,38 @@
+{% import "macros/util.html" as util %}
+
+{% set banner = banner | default(value=true) %}
+{% set color = color | default(value=false) %}
+{% set content = page | default(value=section) %}
+{% set class_name = "poly-hero-card" %}
+
+{% if hero and banner == true %}
+  {% set class_name = class_name~" poly-with-image" %}
+{% endif %}
+
+<a href="{{href | safe}}"
+  class="poly-container-block poly-card-link"
+>
+  <div class="{{class_name}}"
+    {% if hero and banner == true %}
+    style="{{util::background_image_vars(path=util::poly_path(value=hero, assets=content.assets) | trim)}}"
+    {% endif %}
+  >
+    {% if banner == false and hero is defined %} 
+      {% set alt = alt | default(value= hero | split(pat=".") | first | replace(from="_", to=" ") | title ) %}
+      <div class="poly-card-image">
+        <figure class="poly-image is-4by3">
+          <img {{util::img_src(
+            src=util::poly_path(value=hero, assets=content.assets) | trim, 
+            ratio=4.0/3.0,
+            sizes=[600, 400, 300, 200],
+          ) }} 
+          alt="{{alt}}"
+          />
+        </figure>
+      </div>
+    {% endif %}
+    <div class="poly-content{% if color %} poly-with-color{% endif %}" {% if color %}style="color:{{color}}; text-shadow:none;"{% endif %}>
+      {{body | markdown(inline=true) | safe}}
+    </div>
+  </div>
+</a>

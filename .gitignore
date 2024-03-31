@@ -1,5 +1,0 @@
-node_modules/
-public/*
-static/css/*
-package-lock.json
-yarn.lock

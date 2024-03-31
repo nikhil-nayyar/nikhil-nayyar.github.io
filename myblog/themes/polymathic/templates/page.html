@@ -1,0 +1,30 @@
+{% extends "layout.html" %} 
+
+{% block page_meta %}
+  {{ util::content_meta(content=page) }}
+{% endblock %}
+
+{% block breadcrumbs %}
+  {% if config.extra.poly.breadcrumbs %}
+    {% include "partials/breadcrumbs.html" %}
+  {% endif %}
+{% endblock %}
+
+{% block layout_main %}
+  <div class="poly-page-content">
+    <section>
+      {% block page_content %}
+        <article class="poly-page-main poly-container">
+          {{ page.content | safe }}
+        </article>
+      {% endblock %}
+      {% block page_aside %}
+        {% include "partials/page-aside.html"%}
+      {% endblock %}
+    </section>
+  </div>
+{% endblock %}
+
+{% block modals %}
+  {{util::content_modals(assets=page.assets)}}
+{% endblock %}

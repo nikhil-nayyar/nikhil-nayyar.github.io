@@ -1,0 +1,38 @@
+{% extends "layout.html" %} 
+
+{% block page_meta %}
+
+  {{ util::content_meta(content=section) }}
+
+{% endblock %}
+
+{% block breadcrumbs %}
+  {% if config.extra.poly.breadcrumbs %}
+    {% include "partials/breadcrumbs.html" %}
+  {% endif %}
+{% endblock %}
+
+{% block layout_main %}
+  <div class="poly-page-content">
+    <section>
+      {% if section.pages | length > 0 or section.subsections | length > 0 or paginator is defined and paginator.pages | length > 0 %}
+        {% block section_pages %}
+          {% include "partials/section-pages.html" %}
+        {% endblock %}
+      {% endif %}
+      {% if section.content | length > 0 %}
+        {% block section_aside %}
+          <aside class="poly-section-aside">
+            <article class="poly-container">
+              {{section.content | safe}}
+            </article>
+          </aside>
+        {% endblock %}
+      {% endif %}
+    </section>
+  </div>
+{% endblock %}
+
+{% block modals %}
+  {{util::content_modals(assets=section.assets)}}
+{% endblock %}

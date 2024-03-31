@@ -1,0 +1,12 @@
+@use "sass:map";
+
+$poly-config: (
+    "primary-color": #005200,
+    "background-color": #000000,
+    "mono-range": 60,
+    "text-color": #FFFFFF,
+    "poly-link-light": #606C38,
+    "poly-link-dark": #606C38
+);
+
+$ply-config-dark: $poly-config;

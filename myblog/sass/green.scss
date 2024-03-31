@@ -1,0 +1,4 @@
+@use './config';
+@use '../themes/polymathic/sass/polymathic.scss' with (
+    $poly-config: config.$poly-config,
+)

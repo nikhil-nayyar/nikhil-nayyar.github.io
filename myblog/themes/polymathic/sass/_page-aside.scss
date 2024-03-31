@@ -1,0 +1,62 @@
+.poly-section-aside,
+.poly-timeline-aside,
+.poly-term-aside,
+.poly-kind-aside,
+.poly-page-aside {
+  
+  @extend .is-flex, .is-flex-direction-column, .is-justify-content-space-between;
+
+  &:not(.poly-timeline-aside) {
+    min-height: 100%;
+  }
+
+
+  @include until($desktop) {
+    flex-basis: auto !important;
+  }
+
+  .poly-container {
+    flex-basis: unset;
+    > blockquote,
+    > pre {
+      @extend .mx-auto;
+    }
+  }
+
+  .poly-page-nav {
+    @extend .is-flex-shrink-0, .mb-0, .mt-auto;  
+    @extend .is-flex, .is-flex-direction-column, .is-align-items-stretch, .is-justify-content-flex-end;
+    > .poly-toc {
+      @extend .mb-6, .is-flex-shrink-0;
+    }
+    .poly-taxonomy-kind-link {
+      @extend .has-text-centered, .mb-4, .is-flex-shrink-0;
+    }
+    .poly-pair-nav {
+      @extend .mb-1;
+      & + .poly-taxonomy-kind-link {
+        @extend .mt-3, .is-flex-shrink-0;
+      }
+    }
+  }
+
+  .poly-tx-nav {
+    @extend .is-flex, .is-flex-direction-column, .is-align-items-stretch;
+    .poly-taxonomy-term-link {
+      @extend .py-2, .px-1, .has-text-right-desktop, .has-text-weight-bold;
+      @extend .poly-link-hover-block;
+      border-bottom: 1px solid $link-light;
+    }
+  }
+
+  .poly-section-link,
+  .poly-taxonomy-term-link,
+  .poly-taxonomy-kind-link,
+  .poly-page-link,
+  .poly-out-link,
+  .poly-link {
+    @include hover((color, background-color, text-decoration-color)) {
+      background-color: $link-light;
+    }
+  }
+}
