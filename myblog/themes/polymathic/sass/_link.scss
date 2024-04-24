@@ -77,12 +77,12 @@
     1.5
   ) {
     .poly-hero-card, .poly-asset-card {
-      background-color: $link-light !important;
-      box-shadow: $box-link-hover-shadow;
+      background-color: $primary !important;
+      box-shadow: $link;
       &,
       .content,
       .title {
-        color: $link-dark !important;
+        color: $link-light !important;
       }
       .title::first-line {
         text-decoration: overline;

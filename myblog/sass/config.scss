@@ -1,12 +1,28 @@
 @use "sass:map";
 
+// see gruvbox palette: https://github.com/morhetz/gruvbox-contrib/tree/master
+
 $poly-config: (
-    "primary-color": #005200,
-    "background-color": #000000,
-    "mono-range": 60,
-    "text-color": #FFFFFF,
-    "poly-link-light": #606C38,
-    "poly-link-dark": #606C38
+    // "primary-color": #005200,
+    // reseda green : #788475
+    "primary-color": #123524,
+    // "primary-color": #79740e,
+    "black": #3C3836,
+    "white": #EBDBB2,
+    "navigation-blocks-background": conic-gradient(
+        #a89984 0deg 90deg,
+        #d5c4a1 90deg 180deg,
+        #fbf1c7 180deg 360deg
+    ),
+    "background-color": #3C3836,  //pthalo green
+    "hero-background-color": #3C3836,
+    "card-background-color": #123524,
+    "text-color": #EBDBB2,
+    "link-color": #B8BB26,
+    "link-color-light": #B8BB26,
+    "link-color-dark": #79740e,
+    "info-color": #79740e,
+    "mono-range": 0,
 );
 
 $ply-config-dark: $poly-config;

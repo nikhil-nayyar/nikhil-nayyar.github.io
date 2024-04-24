@@ -78,11 +78,11 @@
   }
   .poly-container-block {
     &.poly-link {
-      @include hover() {
+      @include hover($transition-props: ($link, $link-light, $primary)) {
         .poly-hero-card {
-          background-color: $link-light;
+          background-color: $primary;
           background-image: none;
-          color: $link-dark;
+          color: $link-light;
           &,
           * {
             text-shadow: none;

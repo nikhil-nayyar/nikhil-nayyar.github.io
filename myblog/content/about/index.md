@@ -1,7 +1,8 @@
 +++
-title="Hello World!"
-description="my first page"
+title = "about nikhil"
+description = "a primer"
 weight=3
+template="page.html"
 +++
 
 Hello World!

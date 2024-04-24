@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .poly-hero {
   @extend .container, .is-fluid, .px-0;
   > section {
@@ -7,9 +9,10 @@
       > nav {
         @extend .navbar, .is-fixed-top;
         box-shadow: 0 0.01rem 0.025rem rgba($scheme-invert-ter, 50%);
-        background-color: rgba($scheme-main, 0.97);
       }
     }
+    background-color: map.get($poly-config,"hero-background-color");
+
     .poly-hero-body {
       @extend .hero-body;
       overflow: hidden;
@@ -59,7 +62,7 @@
 
 .poly-hero-card {
   @extend .card, .is-flex, .is-flex-direction-column;
-
+  background-color: #79840e;
   overflow: hidden;
   &.poly-with-image {
     @include backgrounds();
@@ -70,7 +73,7 @@
       &:not(.poly-with-color) {
         .title,
         .content {
-          color: $white;
+          color: map.get($poly-config, "text-color");
         }
         text-shadow: $poly-hero-text-shadow;
       }

@@ -18,4 +18,12 @@ highlight_code = true
 # Put all your custom variables here
 
 [extra.poly]
-menu_order=["about/_index.md","blog/_index.md"]
+title="nikhil.nayyar"
+menu_order=[
+    "about/index.md",
+    "blog/_index.md",
+    "musings/_index.md",
+    "resume/index.md",
+    "satire/_index.md",
+    ]
+font_url="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
