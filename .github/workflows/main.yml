@@ -1,0 +1,25 @@
+# On every push this script is executed
+on: push
+name: Build and deploy GH Pages
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: checkout submodule
+        run: cd themes/polymathic/ | git submodule update --init | cd ../..
+      - name: use node.js for css build
+        uses: actions/setup-node@v3
+      - name: install dependencies for css build
+        run:  npm --prefix themes/polymathic install
+      - name: build_and_deploy
+        uses: shalzz/zola-deploy-action@v0.17.2
+        env:
+          # Target branch
+          PAGES_BRANCH: gh-pages
+          # Provide personal access token
+          TOKEN: ${{ secrets.TOKEN }}
+          # Or if publishing to the same repo, use the automatic token
+          #TOKEN: ${{ secrets.GITHUB_TOKEN }}
