@@ -8,6 +8,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+      - uses: webfactory/ssh-agent@v0.9.0
+        with:
+            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: checkout submodule
         run: cd themes/polymathic/ | git submodule update --init | cd ../..
       - name: use node.js for css build
