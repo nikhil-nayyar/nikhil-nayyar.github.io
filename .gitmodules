@@ -1,0 +1,3 @@
+[submodule "polymathic"]
+    path = themes/polymathic
+    url = git@github.com:nikhil-nayyar/polymathic-theme.git
