@@ -1,0 +1,115 @@
+.poly-container {
+  flex-basis: 100%;
+  flex-shrink: 0.5;
+  display: block;
+  &,
+  .poly-content {
+    @for $i from 1 through 6 {
+      > h#{$i} {
+        @extend .title, .is-size-#{$i}-desktop;
+        @if $i < 6 {
+          @extend .is-size-#{$i + 1}-tablet;
+        } @else {
+          @extend .is-size-6-tablet;
+        }
+        @if $i < 5 {
+          @extend .is-size-#{$i + 2}-mobile;
+        } @else {
+          @extend .is-size-6-mobile;
+        }
+        width: 100%;
+        color: inherit;
+        @if $i < 6 {
+          & ~ h#{$i + 1} {
+            @extend .subtitle;
+          }
+        }
+      }
+    }
+
+    > blockquote,
+    > pre {
+      @extend .box;
+      @include until($desktop) {
+        code {
+          white-space: break-spaces;
+        }
+      }
+      @include from($desktop) {
+        margin-left: calc(calc(100% - $tablet) / 2) !important;
+        margin-right: calc(calc(100% - $tablet) / 2) !important;
+      }
+      @include from ($widescreen) {
+        flex-basis: $tablet !important;
+      }
+    }
+    > p {
+      @extend .content;
+    }
+    > figure {
+      @extend .image, .box, .px-0, .pt-0, .mx-auto;
+      overflow: hidden;
+      figcaption {
+        @extend .title, .subtitle, .is-5, .mt-2, .mx-4;
+      }
+    }
+    > img,
+    > p > img {
+      @extend .box, .p-0;
+    }
+    a:not([class]) {
+      @extend .poly-link, .poly-link-hover-text;
+    }
+  }
+
+
+  &.poly-page-main {
+    @extend .columns, .is-multiline, .is-mobile, .is-justify-content-center, .is-align-content-flex-start;
+
+    > * {
+      @extend .column, .is-full;
+      &.poly-container-block {
+        @extend .column, .is-3-fullhd, .is-4-widescreen, .is-4-desktop, .is-6-tablet, .is-12-mobile;
+      }
+      &.poly-grid {
+        display: grid;
+      }
+    }
+  }
+  .poly-container-block {
+    &.poly-link {
+      @include hover($transition-props: ($link, $link-light, $primary)) {
+        .poly-hero-card {
+          background-color: $primary;
+          background-image: none;
+          color: $link-light;
+          &,
+          * {
+            text-shadow: none;
+          }
+        }
+      }
+    }
+
+    > * {
+      min-height: 100%;
+    }
+  }
+
+  .poly-asset-card {
+    @extend .card;
+  }
+
+  a.poly-asset-card {
+    @extend .is-block;
+
+    @include hover() {
+      background-color: $link-light;
+      color: $link-dark;
+    }
+  }
+
+  .poly-message {
+    @extend .message, .is-info;
+  }
+}

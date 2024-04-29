@@ -1,0 +1,43 @@
+{% extends "base.html" %} 
+
+
+{% block page_meta %}
+
+  {{ util::content_meta(content=section, root_title=false) }}
+
+{% endblock %}
+
+{% block content %}
+  {% include "partials/hero.html" %}
+
+  {% if config.extra.poly.menu_order %}
+    <div class="poly-navigation-blocks">
+      <section>
+        {{navigation::macro(menu=config.extra.poly.menu_order)}}
+      </section>
+    </div>
+  {% endif %}
+
+  {% block index_content %}
+    <main class="poly-page-content">
+      <section class="animate__animated animate__fadeIn animate__delay-1s animate__faster">
+        <article class="poly-page-main poly-container">
+          {% if section.title %}
+            {{section.content | safe}}
+          {% else %}
+            {% include "partials/placeholder.html" %}
+          {%endif%}
+        </article>
+      </section>
+    </main>
+  {% endblock %}
+
+  {% block footer %}
+    {{ footer::macro(class="animate__animated animate__fadeInUp") }}
+  {% endblock %}
+
+{% endblock content %}
+
+{% block modals %}
+  {{util::content_modals(assets=section.assets)}}
+{% endblock %}
