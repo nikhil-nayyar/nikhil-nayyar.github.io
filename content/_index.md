@@ -5,9 +5,7 @@ description="firmware engineer. writer. dilettante"
 
 # Hi, I'm Nikhil. 
 
-## I write code, satire, and 
-
-I'm currently engineer firmware at Bevi in Boston, MA
+I'm currently a firmware engineer at Bevi in Boston, MA
 
 I'm fairly active on LinkedIn, Github, and Goodreads.
 
