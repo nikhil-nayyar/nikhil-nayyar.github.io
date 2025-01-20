@@ -2,23 +2,14 @@
 on: push
 name: Build and deploy GH Pages
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      - uses: webfactory/ssh-agent@v0.9.0
-        with:
-            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: checkout submodule
-        run: cd themes/polymathic/ | git submodule update --init | cd ../..
-      - name: use node.js for css build
-        uses: actions/setup-node@v3
-      - name: install dependencies for css build
-        run:  npm --prefix themes/polymathic install
       - name: build_and_deploy
-        uses: shalzz/zola-deploy-action@v0.17.2
+        uses: shalzz/zola-deploy-action@master
         env:
           # Target branch
           PAGES_BRANCH: gh-pages
