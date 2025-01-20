@@ -54,7 +54,7 @@ url = "/files/resume.pdf"
 
 [[extra.main_menu]]
 name = "satire"
-url = "@/_index.md"
+url = "@/satire/index.md"
 
 [[extra.main_menu]]
 name = "blog"
