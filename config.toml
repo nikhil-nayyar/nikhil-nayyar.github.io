@@ -40,22 +40,31 @@ translations = [
 ]
 
 [extra.table_of_contents]
-show = true
+show = false
 max_level = 2
-visible_on_load = true
+visible_on_load = false
 
 [[extra.main_menu]]
 name = "home"
 url = "@/_index.md"
 
 [[extra.main_menu]]
-name = "resume"
+name = "| resume |"
 url = "/files/resume.pdf"
+
+[[extra.main_menu]]
+name = "projects"
+url = "@/projects/index.md"
 
 [[extra.main_menu]]
 name = "satire"
 url = "@/satire/index.md"
 
 [[extra.main_menu]]
+name = "photos"
+url = "@/photos/index.md"
+
+
+[[extra.main_menu]]
 name = "blog"
-url = "@/_index.md"
+url = "@/blog/index.md"
