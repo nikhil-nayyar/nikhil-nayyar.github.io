@@ -1,6 +1,5 @@
 +++
-title="Nikhil Nayyar" # title is the minimum required property for content/_index.md
-description="firmware engineer. writer. dilettante"
+title="home" # title is the minimum required property for content/_index.md
 +++
 
 # Hi, I'm Nikhil. 
