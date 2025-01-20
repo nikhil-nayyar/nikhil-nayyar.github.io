@@ -1,6 +1,17 @@
 +++
-title=">$ ./nikhil-nayyar -h" # title is the minimum required property for content/_index.md
+title="Nikhil Nayyar" # title is the minimum required property for content/_index.md
 description="firmware engineer. writer. dilettante"
 +++
 
-### Site Under Construction!
+# Hi, I'm Nikhil. 
+
+## I write code, satire, and 
+
+I'm currently engineer firmware at Bevi in Boston, MA
+
+I'm fairly active on LinkedIn, Github, and Goodreads.
+
+In my freetime, I write satire, take some photos, and like to share my ideas.
+
+
+
