@@ -14,6 +14,7 @@ Hopefully this list will be expanded in the future. To paraphrase Wikipedia:
 If you are an employer, do not read anything below the line. Or do, I'm not you're boss, you're mine.
 
 ---
+_(1/27/24)_ [Watch as I Destroy Your Society, Gradually, Over the Course of One Hundred to Two Hundred Years](https://www.mcsweeneys.net/articles/watch-as-i-destroy-your-society-gradually-over-the-course-of-one-hundred-to-two-hundred-years) - _McSweeney's_
 
 _(4/26/24)_ [Everyone Is Inherently Worthy of Love, Respect, and Belonging—Except for You](https://www.pointsincase.com/articles/everyone-is-inherently-worthy-of-love-respect-and-belonging-except-for-you) - _Points in Case_
 
