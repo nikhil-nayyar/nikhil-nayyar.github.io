@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://nikhil-nayyar.github.io/sitemap.xml
