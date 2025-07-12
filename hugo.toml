@@ -2,6 +2,7 @@ baseURL = 'https://nikhil-nayyar.github.io'
 languageCode = 'en-us'
 title = 'nikhil-nayyar.net'
 theme = 'hugo-theme-console'
+relativeURLs = true
 
 [params]
   # Cutting off the page title to two chars for mobile (console-demo -> co)
