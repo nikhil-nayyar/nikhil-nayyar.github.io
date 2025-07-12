@@ -1,0 +1,11 @@
+:root {
+  --background-color:#232B2B; /*charleston green*/
+  --font-color: #F9F6EE; /*bone white*/
+  --primary-color: #8A9A5B; /*moss green*/
+  --secondary-color: #B2BEB5 ; /*ash gray*/
+  --error-color:#FADA5E;
+}
+
+.footer{
+  color:#B2BEB5;
+}

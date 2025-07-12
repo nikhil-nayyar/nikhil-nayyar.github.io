@@ -1,213 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nikhil Nayyar</title>
-  <meta name="title" content="Nikhil Nayyar">
-<meta name="description" content="">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-  <style>
-    :root {
-    --width: 800px;
-    --font-main: Verdana, sans-serif;
-    --font-secondary: Verdana, sans-serif;
-    --font-scale: 1em;
-    --background-color: #fff;
-    --heading-color: #222;
-    --text-color: #444;
-    --link-color: #3273dc;
-    --visited-color: #8b6fcb;
-    --code-background-color: #f2f2f2;
-    --code-color: #222;
-    --blockquote-color: #222;
-  }
+	<meta name="generator" content="Hugo 0.148.1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>nikhil-nayyar.net/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="http://nikhil-nayyar.github.io/hugo-theme-console/css/terminal-0.7.4.min.css">
+    <link rel="stylesheet" href="http://nikhil-nayyar.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="http://nikhil-nayyar.github.io/hugo-theme-console/css/console.css">
+    <link rel="stylesheet" href="http://nikhil-nayyar.github.io/css/custom.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       
+      <link href="http://nikhil-nayyar.github.io/index.xml" rel="alternate" type="application/rss+xml" title="nikhil-nayyar.net" />
+    <meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://nikhil-nayyar.github.io/" />
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background-color: #01242e;
-      --heading-color: #eee;
-      --text-color: #ddd;
-      --link-color: #8cc2dd;
-      --visited-color: #8b6fcb;
-      --code-background-color: #000;
-      --code-color: #ddd;
-      --blockquote-color: #ccc;
-    }
-  }
 
-  body {
-    font-family: var(--font-secondary);
-    font-size: var(--font-scale);
-    margin: auto;
-    padding: 20px;
-    max-width: var(--width);
-    text-align: left;
-    background-color: var(--background-color);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    line-height: 1.5;
-    color: var(--text-color);
-  }
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content=""/>
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-main);
-    color: var(--heading-color);
-  }
-
-  a {
-    color: var(--link-color);
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  nav a {
-    margin-right: 8px;
-  }
-
-  nav span.active {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  strong,
-  b {
-    color: var(--heading-color);
-  }
-
-  button {
-    margin: 0;
-    cursor: pointer;
-  }
-
-  main {
-    line-height: 1.6;
-  }
-
-  table {
-    width: 100%;
-  }
-
-  hr {
-    border: 0;
-    border-top: 1px dashed;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  pre code {
-    background-color: var(--code-background-color);
-    color: var(--code-color);
-    display: block;
-    padding: 20px;
-    white-space: pre-wrap;
-    font-size: 0.875rem;
-    overflow-x: auto;
-  }
-
-  code {
-    font-family: monospace;
-    padding: 2px;
-    background-color: var(--code-background-color);
-    color: var(--code-color);
-    border-radius: 3px;
-  }
-
-  blockquote {
-    border-left: 1px solid #999;
-    color: var(--code-color);
-    padding-left: 20px;
-    font-style: italic;
-  }
-
-  footer {
-    padding: 25px 0;
-    text-align: center;
-  }
-
-  .title:hover {
-    text-decoration: none;
-  }
-
-  .title h1 {
-    font-size: 1.5em;
-  }
-
-  .inline {
-    width: auto !important;
-  }
-
-  .highlight,
-  .code {
-    padding: 1px 15px;
-    background-color: var(--code-background-color);
-    color: var(--code-color);
-    border-radius: 3px;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    overflow-x: auto;
-  }
-
-  /* blog post list */
-  ul.blog-posts {
-    list-style-type: none;
-    padding: unset;
-  }
-
-  ul.blog-posts li {
-    display: flex;
-  }
-
-  ul.blog-posts li span {
-    flex: 0 0 130px;
-  }
-
-  ul.blog-posts li a:visited {
-    color: var(--visited-color);
-  }
-
-  .tags {
-    font-size: smaller;
-  }
-
-  </style><link rel="stylesheet" href="/css/mystyle.css">
 </head>
-<body>
-  <header>
-  <nav class="lang" aria-label="language">
-  </nav>
-  <a href="https://nikhil-nayyar.github.io/" class="title">
-    <h1>Nikhil Nayyar</h1>
-  </a>
-  <nav aria-label="site">
-      <a href="https://nikhil-nayyar.github.io/">home</a>
-      <a href="https://nikhil-nayyar.github.io/files/resume.pdf">| resume |</a>
-      <a href="https://nikhil-nayyar.github.io/projects/">projects</a>
-      <a href="https://nikhil-nayyar.github.io/satire/">satire</a>
-      <a href="https://nikhil-nayyar.github.io/photos/">photos</a>
-      <a href="https://nikhil-nayyar.github.io/blog/">blog</a>
-  </nav>
-</header>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="http://nikhil-nayyar.github.io/" class="no-style site-name">nikhil-nayyar.net</a>:~# 
+              </div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://nikhil-nayyar.github.io/docs/nayyar_resume_01_06_25.pdf">
+                    <span property="name">resume.pdf</span></a>
+                    <meta property="position" content="1" />
+                </li>
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://nikhil-nayyar.github.io/reading/">
+                    <span property="name">reading/</span></a>
+                    <meta property="position" content="2" />
+                </li>
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://nikhil-nayyar.github.io/writing/">
+                    <span property="name">writing/</span></a>
+                    <meta property="position" content="3" />
+                </li>
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://nikhil-nayyar.github.io/dev/">
+                    <span property="name">dev/</span></a>
+                    <meta property="position" content="4" />
+                </li>
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://nikhil-nayyar.github.io/photos/">
+                    <span property="name">posts/</span></a>
+                    <meta property="position" content="5" />
+                </li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
 
-  <main>
-    <h2 id="hi-i-m-nikhil">Hi, I'm Nikhil.</h2>
-<p>I'm currently a firmware engineer at <a href="https://bevi.co/">Bevi</a> in <a href="https://earth.google.com/web/search/boston+ma/@42.31436548,-70.97002446,5.25286382a,55015.75725102d,35y,0h,0t,0r/data=CngaShJECiUweDg5ZTM2NTJkMGQzZDMxMWI6MHg3ODdjYmYyNDAxNjJlOGEwGV695UWBLUVAISZC2Uqew1HAKglib3N0b24gbWEYAiABIiYKJAlZCpzLA6tCQBFYCpzLA6tCwBnGm4HHtqZMQCFMslqWrvpMwEICCAE6AwoBMEICCABKDQj___________8BEAA">Boston, MA</a></p>
-<p>I'm fairly active on <a href="https://www.linkedin.com/in/nikhil-nayyar">LinkedIn</a>, <a href="https://github.com/nikhil-nayyar">Github</a>, and <a href="https://www.goodreads.com/user/show/44357889-nikhil">Goodreads</a>.</p>
-<p>In my freetime, I <a href="https://nikhil-nayyar.github.io/satire/">write satire</a>, take some photos, and like to share my ideas.</p>
+    <div class="container animated zoomIn fast" >
+        
 
-  </main>
-<footer>
-    Made with <a href="https://codeberg.org/alanpearce/zola-bearblog">Zola ʕ•ᴥ•ʔ Bear</a>
-</footer>
-</body>
+<h1 id="about-me">About Me</h1>
+<p>Hi, my name is Nikhil. A few quick facts:</p>
+<ul>
+<li>I&rsquo;m currently a firmware engineer at <a href="https://bevi.co/">Bevi</a> in Boston, MA.</li>
+<li>I&rsquo;m fairly active on <a href="https://github.com/nikhil-nayyar">Github</a> and <a href="https://www.goodreads.com/user/show/44357889-nikhil">Goodreads</a>.</li>
+<li>In my freetime, I like to read, write (mostly satire now), and play tennis.</li>
+</ul>
+
+
+
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo</a> with
+    <a href="https://github.com/mrmierzejewski/hugo-theme-console/">Console Theme</a>. 
+</div>
+
+    </div>
+  </body>
 </html>
