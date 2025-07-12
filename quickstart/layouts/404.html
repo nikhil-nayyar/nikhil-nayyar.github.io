@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<h1 style="color: var(--error-color);"> 404: Page not found </h1>
+
+<p>
+    I'm currently in the process of building out my website. 
+    Unfortunately, this page hasn't been built out yet. 
+    Or you are trying to accessing something that doesn't quite exist. 
+    In either case, let's redirect you...
+</p>
+
+<a class="btn btn-primary" href="{{ .Site.BaseURL }}"> Return to the home page</a>
+{{ end }}

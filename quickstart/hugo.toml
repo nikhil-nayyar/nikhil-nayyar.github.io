@@ -1,0 +1,34 @@
+baseURL = 'http://nikhil-nayyar.github.io'
+languageCode = 'en-us'
+title = 'nikhil-nayyar.net'
+theme = 'hugo-theme-console'
+
+[params]
+  # Cutting off the page title to two chars for mobile (console-demo -> co)
+  titleCutting = true
+
+  # Set the animation style -- https://animate.style/
+  # To disable animations, please remove or comment animationStyle parameter
+  animateStyle = "animated zoomIn fast" 
+
+  [[params.navlinks]]
+  name = "resume.pdf"
+  url = "docs/nayyar_resume_01_06_25.pdf"
+
+  [[params.navlinks]]
+  name = "reading/"
+  url = "reading/"
+
+  [[params.navlinks]]
+  name = "writing/"
+  url = "writing/"
+
+  [[params.navlinks]]
+  name = "dev/"
+  url = "dev/"
+
+  [[params.navlinks]]
+  name = "posts/"
+  url = "photos/"
+
+
