@@ -1,0 +1,13 @@
+
+/*gruvbox color scheme */
+:root {
+  --background-color:#282828;
+  --font-color: #F9F6EE;
+  --primary-color: #b8bb26;
+  --secondary-color: #ebdbb2;
+  --error-color:#d79921;
+}
+
+.footer{
+  color:#B2BEB5;
+}

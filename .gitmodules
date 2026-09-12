@@ -4,3 +4,7 @@
 [submodule "quickstart/themes/hugo-theme-console"]
 	path = quickstart/themes/hugo-theme-console
 	url = https://github.com/mrmierzejewski/hugo-theme-console.git
+[submodule "themes/blowfish"]
+	path = themes/blowfish
+	url = https://github.com/nunocoracao/blowfish.git
+	branch = main
